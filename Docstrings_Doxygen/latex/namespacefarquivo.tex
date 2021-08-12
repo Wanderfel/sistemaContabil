@@ -1,0 +1,142 @@
+\section{farquivo Namespace Reference}
+\label{namespacefarquivo}\index{farquivo@{farquivo}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ export\+\_\+contas} (Contas, nome\+\_\+arq)
+\item 
+def \textbf{ export\+\_\+mov} (Mov, nome\+\_\+arq)
+\item 
+def \textbf{ import\+\_\+contas} (nome\+\_\+arq)
+\item 
+def \textbf{ import\+\_\+mov} (nome\+\_\+arq)
+\item 
+def \textbf{ checagem\+\_\+arquivo\+\_\+mov} (tupla, Mov)
+\item 
+def \textbf{ checagem\+\_\+arquivo\+\_\+\+Contas} (tupla, Contas)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespacefarquivo_a3515f184565fdfbcb614ddf80524450a}} 
+\index{farquivo@{farquivo}!checagem\_arquivo\_Contas@{checagem\_arquivo\_Contas}}
+\index{checagem\_arquivo\_Contas@{checagem\_arquivo\_Contas}!farquivo@{farquivo}}
+\subsubsection{checagem\_arquivo\_Contas()}
+{\footnotesize\ttfamily def farquivo.\+checagem\+\_\+arquivo\+\_\+\+Contas (\begin{DoxyParamCaption}\item[{}]{tupla,  }\item[{}]{Contas }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checa a saida da função import_contas e decide se:
+1 - dará uma mensagem de que o arquivo é inexistente;
+2 - Fará a importação a partir do nome do arquivo fornecido;
+
+Parâmetros:
+tupla(tuple)
+Contas(dic)
+\end{DoxyVerb}
+ 
+
+Definition at line 185 of file farquivo.\+py.
+
+\mbox{\label{namespacefarquivo_a38e8b5a280e9e50150c5d0ecea6e2ae2}} 
+\index{farquivo@{farquivo}!checagem\_arquivo\_mov@{checagem\_arquivo\_mov}}
+\index{checagem\_arquivo\_mov@{checagem\_arquivo\_mov}!farquivo@{farquivo}}
+\subsubsection{checagem\_arquivo\_mov()}
+{\footnotesize\ttfamily def farquivo.\+checagem\+\_\+arquivo\+\_\+mov (\begin{DoxyParamCaption}\item[{}]{tupla,  }\item[{}]{Mov }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checa a saida da função import_mov e decide se:
+1 - dará uma mensagem de que o arquivo é inexistente;
+2 - Fará a importação a partir do nome do arquivo fornecido;
+
+Parâmetros:
+tupla(tuple)
+Mov(dic)
+\end{DoxyVerb}
+ 
+
+Definition at line 169 of file farquivo.\+py.
+
+\mbox{\label{namespacefarquivo_aa7197dba3ff50f9ab690c03c5f6746bb}} 
+\index{farquivo@{farquivo}!export\_contas@{export\_contas}}
+\index{export\_contas@{export\_contas}!farquivo@{farquivo}}
+\subsubsection{export\_contas()}
+{\footnotesize\ttfamily def farquivo.\+export\+\_\+contas (\begin{DoxyParamCaption}\item[{}]{Contas,  }\item[{}]{nome\+\_\+arq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Exporta os dados contidos no dicionário de Contas em arquivo CSV, com carácter de separação '\t'
+
+Parâmetros:
+Contas(dic)\end{DoxyVerb}
+ 
+
+Definition at line 3 of file farquivo.\+py.
+
+\mbox{\label{namespacefarquivo_a61d9bc57ad8dfdad6ec4291b6a99f7fa}} 
+\index{farquivo@{farquivo}!export\_mov@{export\_mov}}
+\index{export\_mov@{export\_mov}!farquivo@{farquivo}}
+\subsubsection{export\_mov()}
+{\footnotesize\ttfamily def farquivo.\+export\+\_\+mov (\begin{DoxyParamCaption}\item[{}]{Mov,  }\item[{}]{nome\+\_\+arq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Exporta os dados contidos no dicionário de Movimentação em arquivo CSV, com carácter de separação '\t'
+
+Parâmetros:
+Mov(dic)\end{DoxyVerb}
+ 
+
+Definition at line 28 of file farquivo.\+py.
+
+\mbox{\label{namespacefarquivo_a07614225b4ff56afa80eac14cd04bfb5}} 
+\index{farquivo@{farquivo}!import\_contas@{import\_contas}}
+\index{import\_contas@{import\_contas}!farquivo@{farquivo}}
+\subsubsection{import\_contas()}
+{\footnotesize\ttfamily def farquivo.\+import\+\_\+contas (\begin{DoxyParamCaption}\item[{}]{nome\+\_\+arq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Importa os dados contidos no arquivo csv, com carácter de separação '\t, inserindo
+os dados para dentro do dicionário Contas.
+
+A seguinte função retorna duas tuplas distintas dependendo do seguinte caso:
+
+1 - caso o usuário forneça um nome de arquivo que não consta no arquivo local a
+  função retornará a tupla : ('Nome do arquivo não existe',flag)
+
+2 - caso contrário a função retornará: (Contas,flag)
+
+A flag aparece nos dois casos e ela sai com valores Booleanos( True ou False) dependendo
+dos casos citados acima.
+
+
+nome_arq é parâmetro dado pelo usuário informando o nome do arquivo
+
+
+Parâmetros:
+nome_arq(str)\end{DoxyVerb}
+ 
+
+Definition at line 53 of file farquivo.\+py.
+
+\mbox{\label{namespacefarquivo_a7910f4b9636477db0bb1b508c1e9c2aa}} 
+\index{farquivo@{farquivo}!import\_mov@{import\_mov}}
+\index{import\_mov@{import\_mov}!farquivo@{farquivo}}
+\subsubsection{import\_mov()}
+{\footnotesize\ttfamily def farquivo.\+import\+\_\+mov (\begin{DoxyParamCaption}\item[{}]{nome\+\_\+arq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Importa os dados contidos no arquivo csv, com carácter de separação '\t, inserindo
+os dados para dentro do dicionário Contas.
+
+A seguinte função retorna duas tuplas distintas dependendo do seguinte caso:
+
+1 - caso o usuário forneça um nome de arquivo que não consta no arquivo local a
+  função retornará a tupla : ('Nome do arquivo não existe',flag)
+
+2 - caso contrário a função retornará: (Mov,flag)
+
+A flag aparece nos dois casos e ela sai com valores Booleanos( True ou False) dependendo
+dos casos citados acima.
+
+
+nome_arq é parâmetro dado pelo usuário informando o nome do arquivo
+
+
+Parâmetros:
+nome_arq(str)\end{DoxyVerb}
+ 
+
+Definition at line 112 of file farquivo.\+py.
+

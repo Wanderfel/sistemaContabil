@@ -1,0 +1,43 @@
+\section{fcritica Namespace Reference}
+\label{namespacefcritica}\index{fcritica@{fcritica}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ critica\+\_\+movimento} (registro, Contas, saldo\+\_\+mov, conta\+\_\+deb, conta\+\_\+cred, digito\+\_\+mov\+\_\+deb, digito\+\_\+mov\+\_\+cred)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespacefcritica_a964cf08203c12f5247facd77732b2154}} 
+\index{fcritica@{fcritica}!critica\_movimento@{critica\_movimento}}
+\index{critica\_movimento@{critica\_movimento}!fcritica@{fcritica}}
+\subsubsection{critica\_movimento()}
+{\footnotesize\ttfamily def fcritica.\+critica\+\_\+movimento (\begin{DoxyParamCaption}\item[{}]{registro,  }\item[{}]{Contas,  }\item[{}]{saldo\+\_\+mov,  }\item[{}]{conta\+\_\+deb,  }\item[{}]{conta\+\_\+cred,  }\item[{}]{digito\+\_\+mov\+\_\+deb,  }\item[{}]{digito\+\_\+mov\+\_\+cred }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Realiza a crítica do movimento a partir das movimentações que foram armazenadas
+no dicionário de movimentacao e checa se existem erros.
+
+A funcao retorna uma tupla nesse formato : (constatacao,errosDetectados)
+constatacao(str) - concatenação das diversas mensagens de erro
+errosDetectados(bool) - flag que pode sair com True ou False dependendo
+da seguinte situação:
+- Caso a flag saia como False, significa que não houve erros na movimentacao;
+- Caso a flag saia com True, significa que existem erros na movimentacao;
+
+Portanto as possibilidades que podemos ter dentro da tupla são duas -
+1- string vazia na primeira posição e False na segunda
+2- string na primeira posição e True na segunda
+
+Parâmetros:
+registro(int)
+Contas(dic)
+saldo_mov(float)
+conta_deb(str)
+conta_cred(str)
+digito_mov_deb(str)
+digito_mov_cred(str)
+\end{DoxyVerb}
+ 
+
+Definition at line 3 of file fcritica.\+py.
+

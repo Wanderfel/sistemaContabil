@@ -1,0 +1,536 @@
+\section{Projeto Namespace Reference}
+\label{namespace_projeto}\index{Projeto@{Projeto}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \textbf{ Contas} = \{\}
+\item 
+dictionary \textbf{ Mov} = \{\}
+\item 
+string \textbf{ opcao} = \textquotesingle{}\textquotesingle{}
+\item 
+int \textbf{ contador\+\_\+registro} = 0
+\item 
+bool \textbf{ conta\+Cadastrada} = False
+\item 
+bool \textbf{ movimentacao\+Cadastrada} = False
+\item 
+bool \textbf{ erros\+Detectados} = False
+\item 
+string \textbf{ constatacao} = \textquotesingle{}\textquotesingle{}
+\item 
+int \textbf{ controle} = 0
+\item 
+int \textbf{ ultimoregistro} = 0
+\item 
+\textbf{ conta} = str(input(\textquotesingle{}Número da conta (Digite 0 se deseja sair)\+: \textquotesingle{})).strip()
+\item 
+\textbf{ n} = completazero(\textbf{ conta})
+\item 
+\textbf{ digito} = str(calculadigito(\textbf{ n}))
+\item 
+string \textbf{ conta\+\_\+formatada} = f\textquotesingle{}\{\textbf{ n}[0]\}.\{\textbf{ n}[1]\}.\{\textbf{ n}[2]\}\{\textbf{ n}[3]\}.\{\textbf{ n}[4]\}\{\textbf{ n}[5]\}.\{\textbf{ n}[6]\}\{\textbf{ n}[7]\}\{\textbf{ n}[8]\}.\{\textbf{ n}[9]\}\{\textbf{ n}[10]\} -\/ \{\textbf{ digito}\}\textquotesingle{}
+\item 
+\textbf{ desc} = input(\textquotesingle{}Descrição da conta\+: \textquotesingle{})
+\item 
+\textbf{ tipo} = input(\textquotesingle{}Tipo da \textbf{ conta} [A = Analítica / S = Sintética]\+: \textquotesingle{}).lower()
+\item 
+\textbf{ resp} = input(\textquotesingle{}Deseja cadastrar a \textbf{ conta}?\textbackslash{}\textbf{ n}[S / N]\+: \textquotesingle{}).lower()
+\item 
+string \textbf{ dig\+\_\+contadeb} = \textquotesingle{}\textquotesingle{}
+\item 
+string \textbf{ dig\+\_\+contacred} = \textquotesingle{}\textquotesingle{}
+\item 
+\textbf{ dt} = date.\+today()
+\item 
+string \textbf{ data} = f\textquotesingle{}\{dt.\+year\}/\{dt.\+month\}/\{dt.\+day\}\textquotesingle{}
+\item 
+tuple \textbf{ contadeb} = (input(\textquotesingle{}Conta de Débito\+:\textquotesingle{}))
+\item 
+tuple \textbf{ contacred} = (input(\textquotesingle{}Conta de Crédito\+: \textquotesingle{}))
+\item 
+\textbf{ valor} = str(input(\textquotesingle{}Quantia a ser movimentada\+: \textquotesingle{}))
+\item 
+\textbf{ descc} = input(\textquotesingle{}Descrição complementar\+: \textquotesingle{})
+\item 
+\textbf{ registro} = \textbf{ i}
+\item 
+dictionary \textbf{ saldo\+\_\+mov} = \textbf{ Mov}[\textbf{ i}][6]
+\item 
+dictionary \textbf{ conta\+\_\+deb} = \textbf{ Mov}[\textbf{ i}][1]
+\item 
+dictionary \textbf{ conta\+\_\+cred} = \textbf{ Mov}[\textbf{ i}][3]
+\item 
+dictionary \textbf{ digito\+\_\+mov\+\_\+deb} = \textbf{ Mov}[\textbf{ i}][2]
+\item 
+dictionary \textbf{ digito\+\_\+mov\+\_\+cred} = \textbf{ Mov}[\textbf{ i}][4]
+\item 
+\textbf{ situacao} = critica\+\_\+movimento(\textbf{ registro}, \textbf{ Contas}, \textbf{ saldo\+\_\+mov}, \textbf{ conta\+\_\+deb}, \textbf{ conta\+\_\+cred}, \textbf{ digito\+\_\+mov\+\_\+deb}, \textbf{ digito\+\_\+mov\+\_\+cred})
+\item 
+\textbf{ nome\+\_\+arq} = input(\textquotesingle{}Digite o nome do arquivo\+:\textquotesingle{})
+\item 
+\textbf{ matriz} = transformatriz\+\_\+contas(\textbf{ Contas})
+\item 
+\textbf{ Conta\+\_\+ordenada} = ordena\+Conta(\textbf{ Contas})
+\item 
+\textbf{ k} = completazero(k)
+\item 
+\textbf{ i} = obter\+Conta\+Curta(\textbf{ k})
+\item 
+int \textbf{ tam\+\_\+s} = 30
+\item 
+\textbf{ vetor\+\_\+saldo} = total(\textbf{ Contas})
+\item 
+\textbf{ saldodeb} = \textbf{ vetor\+\_\+saldo}[0]
+\item 
+\textbf{ saldocred} = \textbf{ vetor\+\_\+saldo}[1]
+\item 
+\textbf{ saldo\+\_\+final} = \textbf{ vetor\+\_\+saldo}[2]
+\item 
+\textbf{ import\+\_\+\+Contas} = import\+\_\+contas(\textbf{ nome\+\_\+arq})
+\item 
+\textbf{ import\+\_\+\+Mov} = import\+\_\+mov(\textbf{ nome\+\_\+arq})
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\label{namespace_projeto_a34f42a46d1d9fcd7cc5a1ccb7a6a83dd}} 
+\index{Projeto@{Projeto}!constatacao@{constatacao}}
+\index{constatacao@{constatacao}!Projeto@{Projeto}}
+\subsubsection{constatacao}
+{\footnotesize\ttfamily string Projeto.\+constatacao = \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line 19 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ae26407d7e3be564d0e34bb7903dd9250}} 
+\index{Projeto@{Projeto}!conta@{conta}}
+\index{conta@{conta}!Projeto@{Projeto}}
+\subsubsection{conta}
+{\footnotesize\ttfamily Projeto.\+conta = str(input(\textquotesingle{}Número da conta (Digite 0 se deseja sair)\+: \textquotesingle{})).strip()}
+
+
+
+Definition at line 33 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a703b256a370c03db18ca15392beda1b3}} 
+\index{Projeto@{Projeto}!conta\_cred@{conta\_cred}}
+\index{conta\_cred@{conta\_cred}!Projeto@{Projeto}}
+\subsubsection{conta\_cred}
+{\footnotesize\ttfamily dictionary Projeto.\+conta\+\_\+cred = \textbf{ Mov}[\textbf{ i}][3]}
+
+
+
+Definition at line 159 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ac81ed4a1f743f3e2b3784f788182c34b}} 
+\index{Projeto@{Projeto}!conta\_deb@{conta\_deb}}
+\index{conta\_deb@{conta\_deb}!Projeto@{Projeto}}
+\subsubsection{conta\_deb}
+{\footnotesize\ttfamily dictionary Projeto.\+conta\+\_\+deb = \textbf{ Mov}[\textbf{ i}][1]}
+
+
+
+Definition at line 158 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_abb46de849984416459294712fd010bfd}} 
+\index{Projeto@{Projeto}!conta\_formatada@{conta\_formatada}}
+\index{conta\_formatada@{conta\_formatada}!Projeto@{Projeto}}
+\subsubsection{conta\_formatada}
+{\footnotesize\ttfamily string Projeto.\+conta\+\_\+formatada = f\textquotesingle{}\{\textbf{ n}[0]\}.\{\textbf{ n}[1]\}.\{\textbf{ n}[2]\}\{\textbf{ n}[3]\}.\{\textbf{ n}[4]\}\{\textbf{ n}[5]\}.\{\textbf{ n}[6]\}\{\textbf{ n}[7]\}\{\textbf{ n}[8]\}.\{\textbf{ n}[9]\}\{\textbf{ n}[10]\} -\/ \{\textbf{ digito}\}\textquotesingle{}}
+
+
+
+Definition at line 44 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a14763e7e385d7a55c1567ed6b58d8960}} 
+\index{Projeto@{Projeto}!Conta\_ordenada@{Conta\_ordenada}}
+\index{Conta\_ordenada@{Conta\_ordenada}!Projeto@{Projeto}}
+\subsubsection{Conta\_ordenada}
+{\footnotesize\ttfamily Projeto.\+Conta\+\_\+ordenada = ordena\+Conta(\textbf{ Contas})}
+
+
+
+Definition at line 324 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a52bab4fbef776f03e171b013f5f1dce6}} 
+\index{Projeto@{Projeto}!contaCadastrada@{contaCadastrada}}
+\index{contaCadastrada@{contaCadastrada}!Projeto@{Projeto}}
+\subsubsection{contaCadastrada}
+{\footnotesize\ttfamily bool Projeto.\+conta\+Cadastrada = False}
+
+
+
+Definition at line 16 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a1854fe94ee22a5c42ee839500173e775}} 
+\index{Projeto@{Projeto}!contacred@{contacred}}
+\index{contacred@{contacred}!Projeto@{Projeto}}
+\subsubsection{contacred}
+{\footnotesize\ttfamily Projeto.\+contacred = (input(\textquotesingle{}Conta de Crédito\+: \textquotesingle{}))}
+
+
+
+Definition at line 108 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a5bdbf8d4bbd40bee8b28f58109d6d54a}} 
+\index{Projeto@{Projeto}!contadeb@{contadeb}}
+\index{contadeb@{contadeb}!Projeto@{Projeto}}
+\subsubsection{contadeb}
+{\footnotesize\ttfamily Projeto.\+contadeb = (input(\textquotesingle{}Conta de Débito\+:\textquotesingle{}))}
+
+
+
+Definition at line 103 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a2d47cca55b205b097b4df290d4a0acd5}} 
+\index{Projeto@{Projeto}!contador\_registro@{contador\_registro}}
+\index{contador\_registro@{contador\_registro}!Projeto@{Projeto}}
+\subsubsection{contador\_registro}
+{\footnotesize\ttfamily int Projeto.\+contador\+\_\+registro = 0}
+
+
+
+Definition at line 15 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ada709372eddfd739882ef298cbb48282}} 
+\index{Projeto@{Projeto}!Contas@{Contas}}
+\index{Contas@{Contas}!Projeto@{Projeto}}
+\subsubsection{Contas}
+{\footnotesize\ttfamily dictionary Projeto.\+Contas = \{\}}
+
+
+
+Definition at line 12 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a3ae8c4ce87d368e58b45b2935231231b}} 
+\index{Projeto@{Projeto}!controle@{controle}}
+\index{controle@{controle}!Projeto@{Projeto}}
+\subsubsection{controle}
+{\footnotesize\ttfamily int Projeto.\+controle = 0}
+
+
+
+Definition at line 20 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a9abc4f259e474897d80fc4911b8a5fb3}} 
+\index{Projeto@{Projeto}!data@{data}}
+\index{data@{data}!Projeto@{Projeto}}
+\subsubsection{data}
+{\footnotesize\ttfamily Projeto.\+data = f\textquotesingle{}\{dt.\+year\}/\{dt.\+month\}/\{dt.\+day\}\textquotesingle{}}
+
+
+
+Definition at line 100 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a4196823affeae767dceac4b7fcfa7102}} 
+\index{Projeto@{Projeto}!desc@{desc}}
+\index{desc@{desc}!Projeto@{Projeto}}
+\subsubsection{desc}
+{\footnotesize\ttfamily Projeto.\+desc = input(\textquotesingle{}Descrição da conta\+: \textquotesingle{})}
+
+
+
+Definition at line 57 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a89d944e01203541f8d44f157e8747098}} 
+\index{Projeto@{Projeto}!descc@{descc}}
+\index{descc@{descc}!Projeto@{Projeto}}
+\subsubsection{descc}
+{\footnotesize\ttfamily Projeto.\+descc = input(\textquotesingle{}Descrição complementar\+: \textquotesingle{})}
+
+
+
+Definition at line 119 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_abedb0558d49965245553b18218ac2966}} 
+\index{Projeto@{Projeto}!dig\_contacred@{dig\_contacred}}
+\index{dig\_contacred@{dig\_contacred}!Projeto@{Projeto}}
+\subsubsection{dig\_contacred}
+{\footnotesize\ttfamily Projeto.\+dig\+\_\+contacred = \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line 98 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a2abe88aeabb7463f6be64bd544d7cc38}} 
+\index{Projeto@{Projeto}!dig\_contadeb@{dig\_contadeb}}
+\index{dig\_contadeb@{dig\_contadeb}!Projeto@{Projeto}}
+\subsubsection{dig\_contadeb}
+{\footnotesize\ttfamily Projeto.\+dig\+\_\+contadeb = \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line 97 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a2a52fe65086198d75f2c72ee60c7fa36}} 
+\index{Projeto@{Projeto}!digito@{digito}}
+\index{digito@{digito}!Projeto@{Projeto}}
+\subsubsection{digito}
+{\footnotesize\ttfamily Projeto.\+digito = str(calculadigito(\textbf{ n}))}
+
+
+
+Definition at line 43 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a7e7a81ba7f60bebdb54494c704704323}} 
+\index{Projeto@{Projeto}!digito\_mov\_cred@{digito\_mov\_cred}}
+\index{digito\_mov\_cred@{digito\_mov\_cred}!Projeto@{Projeto}}
+\subsubsection{digito\_mov\_cred}
+{\footnotesize\ttfamily dictionary Projeto.\+digito\+\_\+mov\+\_\+cred = \textbf{ Mov}[\textbf{ i}][4]}
+
+
+
+Definition at line 161 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a37877b09dbd85be74f94486887a769c8}} 
+\index{Projeto@{Projeto}!digito\_mov\_deb@{digito\_mov\_deb}}
+\index{digito\_mov\_deb@{digito\_mov\_deb}!Projeto@{Projeto}}
+\subsubsection{digito\_mov\_deb}
+{\footnotesize\ttfamily dictionary Projeto.\+digito\+\_\+mov\+\_\+deb = \textbf{ Mov}[\textbf{ i}][2]}
+
+
+
+Definition at line 160 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_af9114eb98958231b212b7ff37cfcddb7}} 
+\index{Projeto@{Projeto}!dt@{dt}}
+\index{dt@{dt}!Projeto@{Projeto}}
+\subsubsection{dt}
+{\footnotesize\ttfamily Projeto.\+dt = date.\+today()}
+
+
+
+Definition at line 99 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a349e7a873a74aec3aa35497099a913dc}} 
+\index{Projeto@{Projeto}!errosDetectados@{errosDetectados}}
+\index{errosDetectados@{errosDetectados}!Projeto@{Projeto}}
+\subsubsection{errosDetectados}
+{\footnotesize\ttfamily bool Projeto.\+erros\+Detectados = False}
+
+
+
+Definition at line 18 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a1ec645113741ea544a6c57676694a906}} 
+\index{Projeto@{Projeto}!i@{i}}
+\index{i@{i}!Projeto@{Projeto}}
+\subsubsection{i}
+{\footnotesize\ttfamily Projeto.\+i = obter\+Conta\+Curta(\textbf{ k})}
+
+
+
+Definition at line 327 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ab75dd6f236c6f049a30677f406c98978}} 
+\index{Projeto@{Projeto}!import\_Contas@{import\_Contas}}
+\index{import\_Contas@{import\_Contas}!Projeto@{Projeto}}
+\subsubsection{import\_Contas}
+{\footnotesize\ttfamily Projeto.\+import\+\_\+\+Contas = import\+\_\+contas(\textbf{ nome\+\_\+arq})}
+
+
+
+Definition at line 351 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a35ff6f9def607edd595d8890704710c5}} 
+\index{Projeto@{Projeto}!import\_Mov@{import\_Mov}}
+\index{import\_Mov@{import\_Mov}!Projeto@{Projeto}}
+\subsubsection{import\_Mov}
+{\footnotesize\ttfamily Projeto.\+import\+\_\+\+Mov = import\+\_\+mov(\textbf{ nome\+\_\+arq})}
+
+
+
+Definition at line 360 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a65ae2f97c6fd29621f1e0bfa8036e088}} 
+\index{Projeto@{Projeto}!k@{k}}
+\index{k@{k}!Projeto@{Projeto}}
+\subsubsection{k}
+{\footnotesize\ttfamily Projeto.\+k = completazero(k)}
+
+
+
+Definition at line 326 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a3de00514a36b88dfaaa871de9b79b917}} 
+\index{Projeto@{Projeto}!matriz@{matriz}}
+\index{matriz@{matriz}!Projeto@{Projeto}}
+\subsubsection{matriz}
+{\footnotesize\ttfamily Projeto.\+matriz = transformatriz\+\_\+contas(\textbf{ Contas})}
+
+
+
+Definition at line 273 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a3071c979119cd663eb8c5ec8bc5d9a0c}} 
+\index{Projeto@{Projeto}!Mov@{Mov}}
+\index{Mov@{Mov}!Projeto@{Projeto}}
+\subsubsection{Mov}
+{\footnotesize\ttfamily dictionary Projeto.\+Mov = \{\}}
+
+
+
+Definition at line 13 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ac5b443320d191b9d30ad99f83dca7669}} 
+\index{Projeto@{Projeto}!movimentacaoCadastrada@{movimentacaoCadastrada}}
+\index{movimentacaoCadastrada@{movimentacaoCadastrada}!Projeto@{Projeto}}
+\subsubsection{movimentacaoCadastrada}
+{\footnotesize\ttfamily bool Projeto.\+movimentacao\+Cadastrada = False}
+
+
+
+Definition at line 17 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a8a986490f4bf52948788cd46131601e5}} 
+\index{Projeto@{Projeto}!n@{n}}
+\index{n@{n}!Projeto@{Projeto}}
+\subsubsection{n}
+{\footnotesize\ttfamily Projeto.\+n = completazero(\textbf{ conta})}
+
+
+
+Definition at line 42 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_aa2d486f2f3ac29af3b386dcdaf510a32}} 
+\index{Projeto@{Projeto}!nome\_arq@{nome\_arq}}
+\index{nome\_arq@{nome\_arq}!Projeto@{Projeto}}
+\subsubsection{nome\_arq}
+{\footnotesize\ttfamily Projeto.\+nome\+\_\+arq = input(\textquotesingle{}Digite o nome do arquivo\+:\textquotesingle{})}
+
+
+
+Definition at line 272 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_afce8999e26d2323f139c03feb10f527f}} 
+\index{Projeto@{Projeto}!opcao@{opcao}}
+\index{opcao@{opcao}!Projeto@{Projeto}}
+\subsubsection{opcao}
+{\footnotesize\ttfamily Projeto.\+opcao = \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line 14 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a7c6cb7a55065e95a923b95b63eb96521}} 
+\index{Projeto@{Projeto}!registro@{registro}}
+\index{registro@{registro}!Projeto@{Projeto}}
+\subsubsection{registro}
+{\footnotesize\ttfamily Projeto.\+registro = \textbf{ i}}
+
+
+
+Definition at line 156 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_aafba3427340b2f5613c64f3125886ddc}} 
+\index{Projeto@{Projeto}!resp@{resp}}
+\index{resp@{resp}!Projeto@{Projeto}}
+\subsubsection{resp}
+{\footnotesize\ttfamily Projeto.\+resp = input(\textquotesingle{}Deseja cadastrar a \textbf{ conta}?\textbackslash{}\textbf{ n}[S / N]\+: \textquotesingle{}).lower()}
+
+
+
+Definition at line 70 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ad32e20ef172f2f954441ef6b416fe6f5}} 
+\index{Projeto@{Projeto}!saldo\_final@{saldo\_final}}
+\index{saldo\_final@{saldo\_final}!Projeto@{Projeto}}
+\subsubsection{saldo\_final}
+{\footnotesize\ttfamily Projeto.\+saldo\+\_\+final = \textbf{ vetor\+\_\+saldo}[2]}
+
+
+
+Definition at line 340 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_af4086a80d2833a3590173bdae1f44d86}} 
+\index{Projeto@{Projeto}!saldo\_mov@{saldo\_mov}}
+\index{saldo\_mov@{saldo\_mov}!Projeto@{Projeto}}
+\subsubsection{saldo\_mov}
+{\footnotesize\ttfamily dictionary Projeto.\+saldo\+\_\+mov = \textbf{ Mov}[\textbf{ i}][6]}
+
+
+
+Definition at line 157 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ac7a37eba244f854e1cf1c9bebb6ebb35}} 
+\index{Projeto@{Projeto}!saldocred@{saldocred}}
+\index{saldocred@{saldocred}!Projeto@{Projeto}}
+\subsubsection{saldocred}
+{\footnotesize\ttfamily Projeto.\+saldocred = \textbf{ vetor\+\_\+saldo}[1]}
+
+
+
+Definition at line 339 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a6034640d784bdf781fd5b618d62d4e08}} 
+\index{Projeto@{Projeto}!saldodeb@{saldodeb}}
+\index{saldodeb@{saldodeb}!Projeto@{Projeto}}
+\subsubsection{saldodeb}
+{\footnotesize\ttfamily Projeto.\+saldodeb = \textbf{ vetor\+\_\+saldo}[0]}
+
+
+
+Definition at line 338 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a242b1fb2920deef2b1c483aa8ebbb8ab}} 
+\index{Projeto@{Projeto}!situacao@{situacao}}
+\index{situacao@{situacao}!Projeto@{Projeto}}
+\subsubsection{situacao}
+{\footnotesize\ttfamily Projeto.\+situacao = critica\+\_\+movimento(\textbf{ registro}, \textbf{ Contas}, \textbf{ saldo\+\_\+mov}, \textbf{ conta\+\_\+deb}, \textbf{ conta\+\_\+cred}, \textbf{ digito\+\_\+mov\+\_\+deb}, \textbf{ digito\+\_\+mov\+\_\+cred})}
+
+
+
+Definition at line 163 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a4ee95fe18eba7d6abead98850d790d65}} 
+\index{Projeto@{Projeto}!tam\_s@{tam\_s}}
+\index{tam\_s@{tam\_s}!Projeto@{Projeto}}
+\subsubsection{tam\_s}
+{\footnotesize\ttfamily int Projeto.\+tam\+\_\+s = 30}
+
+
+
+Definition at line 330 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_ae7ed8df281a628fe6ee6e934ceb95e0d}} 
+\index{Projeto@{Projeto}!tipo@{tipo}}
+\index{tipo@{tipo}!Projeto@{Projeto}}
+\subsubsection{tipo}
+{\footnotesize\ttfamily Projeto.\+tipo = input(\textquotesingle{}Tipo da \textbf{ conta} [A = Analítica / S = Sintética]\+: \textquotesingle{}).lower()}
+
+
+
+Definition at line 59 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_aa330b039b98b823b4fb42f80dbedea28}} 
+\index{Projeto@{Projeto}!ultimoregistro@{ultimoregistro}}
+\index{ultimoregistro@{ultimoregistro}!Projeto@{Projeto}}
+\subsubsection{ultimoregistro}
+{\footnotesize\ttfamily Projeto.\+ultimoregistro = 0}
+
+
+
+Definition at line 21 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a4c71b8d48ad553f362be9c8b97aaf38a}} 
+\index{Projeto@{Projeto}!valor@{valor}}
+\index{valor@{valor}!Projeto@{Projeto}}
+\subsubsection{valor}
+{\footnotesize\ttfamily int Projeto.\+valor = str(input(\textquotesingle{}Quantia a ser movimentada\+: \textquotesingle{}))}
+
+
+
+Definition at line 113 of file Projeto.\+py.
+
+\mbox{\label{namespace_projeto_a35175d061067fc4e5b9a1ebef1167cd5}} 
+\index{Projeto@{Projeto}!vetor\_saldo@{vetor\_saldo}}
+\index{vetor\_saldo@{vetor\_saldo}!Projeto@{Projeto}}
+\subsubsection{vetor\_saldo}
+{\footnotesize\ttfamily Projeto.\+vetor\+\_\+saldo = total(\textbf{ Contas})}
+
+
+
+Definition at line 337 of file Projeto.\+py.
+

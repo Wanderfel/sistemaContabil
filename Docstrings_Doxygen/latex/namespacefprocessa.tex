@@ -1,0 +1,69 @@
+\section{fprocessa Namespace Reference}
+\label{namespacefprocessa}\index{fprocessa@{fprocessa}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \textbf{ processamento} (Contas, saldo\+\_\+mov, conta\+\_\+mov, operacao)
+\item 
+def \textbf{ total} (Contas)
+\item 
+def \textbf{ zera\+\_\+contas} (Contas)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespacefprocessa_ab68fc40541cb16b11066b05f60cb8667}} 
+\index{fprocessa@{fprocessa}!processamento@{processamento}}
+\index{processamento@{processamento}!fprocessa@{fprocessa}}
+\subsubsection{processamento()}
+{\footnotesize\ttfamily def fprocessa.\+processamento (\begin{DoxyParamCaption}\item[{}]{Contas,  }\item[{}]{saldo\+\_\+mov,  }\item[{}]{conta\+\_\+mov,  }\item[{}]{operacao }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Atualização financeira. Analisa as contas onde foram feita as movimentações e transfere elas para
+o saldo total de débito, total de crédito e saldo total, realizando as modificações para as respectivas
+contas superiores.
+
+A operação poderá ser de débito ou de crédito ( 'C' ou 'D') definida no parâmetro operacao
+
+Parâmetros:
+Contas(dic)
+saldo_mov(float)
+conta_mov(float)
+operacao(str)
+\end{DoxyVerb}
+ 
+
+Definition at line 1 of file fprocessa.\+py.
+
+\mbox{\label{namespacefprocessa_a3607aa92540b4d12f3d2719e11a71a41}} 
+\index{fprocessa@{fprocessa}!total@{total}}
+\index{total@{total}!fprocessa@{fprocessa}}
+\subsubsection{total()}
+{\footnotesize\ttfamily def fprocessa.\+total (\begin{DoxyParamCaption}\item[{}]{Contas }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Varre o dicionário Contas e soma todos os saldo-débito e os saldo-crédito, e em seguida subtrai esses valores para gerar
+a Receita. No final guarda essas informações em uma lista
+
+A função retorna um lista contendo: O total de despesas e o Total de Receitas e o saldo final.
+
+Parâmetros:
+Contas(dic)
+\end{DoxyVerb}
+ 
+
+Definition at line 56 of file fprocessa.\+py.
+
+\mbox{\label{namespacefprocessa_a7c8347c696947c8a6533bcae4ad2792f}} 
+\index{fprocessa@{fprocessa}!zera\_contas@{zera\_contas}}
+\index{zera\_contas@{zera\_contas}!fprocessa@{fprocessa}}
+\subsubsection{zera\_contas()}
+{\footnotesize\ttfamily def fprocessa.\+zera\+\_\+contas (\begin{DoxyParamCaption}\item[{}]{Contas }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Zera o saldo débito, saldo crédito e o saldo total de todas as contas do dicionário.
+
+Parâmetros:
+Contas(dic)
+\end{DoxyVerb}
+ 
+
+Definition at line 81 of file fprocessa.\+py.
+

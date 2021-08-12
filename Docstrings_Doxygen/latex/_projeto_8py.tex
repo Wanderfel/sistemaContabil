@@ -1,0 +1,98 @@
+\section{Projeto.\+py File Reference}
+\label{_projeto_8py}\index{Projeto.py@{Projeto.py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ Projeto}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \textbf{ Projeto.\+Contas} = \{\}
+\item 
+dictionary \textbf{ Projeto.\+Mov} = \{\}
+\item 
+string \textbf{ Projeto.\+opcao} = \textquotesingle{}\textquotesingle{}
+\item 
+int \textbf{ Projeto.\+contador\+\_\+registro} = 0
+\item 
+bool \textbf{ Projeto.\+conta\+Cadastrada} = False
+\item 
+bool \textbf{ Projeto.\+movimentacao\+Cadastrada} = False
+\item 
+bool \textbf{ Projeto.\+erros\+Detectados} = False
+\item 
+string \textbf{ Projeto.\+constatacao} = \textquotesingle{}\textquotesingle{}
+\item 
+int \textbf{ Projeto.\+controle} = 0
+\item 
+int \textbf{ Projeto.\+ultimoregistro} = 0
+\item 
+\textbf{ Projeto.\+conta} = str(input(\textquotesingle{}Número da conta (Digite 0 se deseja sair)\+: \textquotesingle{})).strip()
+\item 
+\textbf{ Projeto.\+n} = completazero(conta)
+\item 
+\textbf{ Projeto.\+digito} = str(calculadigito(n))
+\item 
+string \textbf{ Projeto.\+conta\+\_\+formatada} = f\textquotesingle{}\{n[0]\}.\{n[1]\}.\{n[2]\}\{n[3]\}.\{n[4]\}\{n[5]\}.\{n[6]\}\{n[7]\}\{n[8]\}.\{n[9]\}\{n[10]\} -\/ \{digito\}\textquotesingle{}
+\item 
+\textbf{ Projeto.\+desc} = input(\textquotesingle{}Descrição da conta\+: \textquotesingle{})
+\item 
+\textbf{ Projeto.\+tipo} = input(\textquotesingle{}Tipo da conta [A = Analítica / S = Sintética]\+: \textquotesingle{}).lower()
+\item 
+\textbf{ Projeto.\+resp} = input(\textquotesingle{}Deseja cadastrar a conta?\textbackslash{}n[S / N]\+: \textquotesingle{}).lower()
+\item 
+string \textbf{ Projeto.\+dig\+\_\+contadeb} = \textquotesingle{}\textquotesingle{}
+\item 
+string \textbf{ Projeto.\+dig\+\_\+contacred} = \textquotesingle{}\textquotesingle{}
+\item 
+\textbf{ Projeto.\+dt} = date.\+today()
+\item 
+string \textbf{ Projeto.\+data} = f\textquotesingle{}\{dt.\+year\}/\{dt.\+month\}/\{dt.\+day\}\textquotesingle{}
+\item 
+tuple \textbf{ Projeto.\+contadeb} = (input(\textquotesingle{}Conta de Débito\+:\textquotesingle{}))
+\item 
+tuple \textbf{ Projeto.\+contacred} = (input(\textquotesingle{}Conta de Crédito\+: \textquotesingle{}))
+\item 
+\textbf{ Projeto.\+valor} = str(input(\textquotesingle{}Quantia a ser movimentada\+: \textquotesingle{}))
+\item 
+\textbf{ Projeto.\+descc} = input(\textquotesingle{}Descrição complementar\+: \textquotesingle{})
+\item 
+\textbf{ Projeto.\+registro} = i
+\item 
+dictionary \textbf{ Projeto.\+saldo\+\_\+mov} = Mov[i][6]
+\item 
+dictionary \textbf{ Projeto.\+conta\+\_\+deb} = Mov[i][1]
+\item 
+dictionary \textbf{ Projeto.\+conta\+\_\+cred} = Mov[i][3]
+\item 
+dictionary \textbf{ Projeto.\+digito\+\_\+mov\+\_\+deb} = Mov[i][2]
+\item 
+dictionary \textbf{ Projeto.\+digito\+\_\+mov\+\_\+cred} = Mov[i][4]
+\item 
+\textbf{ Projeto.\+situacao} = critica\+\_\+movimento(registro, Contas, saldo\+\_\+mov, conta\+\_\+deb, conta\+\_\+cred, digito\+\_\+mov\+\_\+deb, digito\+\_\+mov\+\_\+cred)
+\item 
+\textbf{ Projeto.\+nome\+\_\+arq} = input(\textquotesingle{}Digite o nome do arquivo\+:\textquotesingle{})
+\item 
+\textbf{ Projeto.\+matriz} = transformatriz\+\_\+contas(Contas)
+\item 
+\textbf{ Projeto.\+Conta\+\_\+ordenada} = ordena\+Conta(Contas)
+\item 
+\textbf{ Projeto.\+k} = completazero(k)
+\item 
+\textbf{ Projeto.\+i} = obter\+Conta\+Curta(k)
+\item 
+int \textbf{ Projeto.\+tam\+\_\+s} = 30
+\item 
+\textbf{ Projeto.\+vetor\+\_\+saldo} = total(Contas)
+\item 
+\textbf{ Projeto.\+saldodeb} = vetor\+\_\+saldo[0]
+\item 
+\textbf{ Projeto.\+saldocred} = vetor\+\_\+saldo[1]
+\item 
+\textbf{ Projeto.\+saldo\+\_\+final} = vetor\+\_\+saldo[2]
+\item 
+\textbf{ Projeto.\+import\+\_\+\+Contas} = import\+\_\+contas(nome\+\_\+arq)
+\item 
+\textbf{ Projeto.\+import\+\_\+\+Mov} = import\+\_\+mov(nome\+\_\+arq)
+\end{DoxyCompactItemize}
